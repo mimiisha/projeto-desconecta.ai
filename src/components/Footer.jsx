@@ -1,16 +1,27 @@
-import React from "react"
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
-    return (
-        <footer className="w-full bg-bgFooter text-gray-300 pt-6 pb-10 mt-10 border-t border-gray-700 shadow-sm flex justify-center">
-            <div className="px-4">
-                <p className="text-sm text-center">
-                    © {new Date().getFullYear()} Misha e Jayne — Todos os direitos reservados.<br />
-                    Um projeto para inspirar a reconexão.
-                </p>
-            </div>
-        </footer>
-    )
-}
+  const location = useLocation();
+  const greenPages = ["/", "/sobre", "/desafio"];
 
-export default Footer
+  const bgClass = greenPages.includes(location.pathname)
+    ? "bg-azul"
+    : "bg-verde";
+
+  return (
+    <footer
+      className={`${bgClass} w-full text-black pt-6 pb-10 mt-10 shadow-sm flex justify-center`}
+    >
+      <div className="px-4">
+        <p className="text-xs md:text-sm text-center">
+          © {new Date().getFullYear()} Desconecta.ai - Promovendo o equilíbrio
+          digital através do design consciente.
+          <br />
+          Um projeto para inspirar a reconexão - Misha e Jayne Matias.
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
