@@ -8,7 +8,7 @@ export const CardsAplicam = () => {
     ];
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-16 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full items-stretch">
             {items.map((item, idx) => (
                 <div
                     key={idx}

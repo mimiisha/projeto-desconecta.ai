@@ -9,14 +9,14 @@ export const CardsIdentidade = () => {
     ];
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-16 w-full items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full items-stretch">
             {items.map((item, idx) => (
                 <div
                     key={idx}
                     className="relative bg-white rounded-xl shadow-lg overflow-hidden pt-8 pb-6 px-6 w-full flex flex-col"
                 >
                     <div
-                        className={`absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full border-4 border-white/10 z-10 ${item.color}`}
+                        className={`absolute -top-6 left-1/2 transform -translate-x-1/2 w-12 h-12 rounded-full border-4 border-white/10 ${item.color}`}
                         aria-hidden="true"
                     />
 
