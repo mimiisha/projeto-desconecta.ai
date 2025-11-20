@@ -8,7 +8,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 const TimeDashboard = () => {
   const [timeData, setTimeData] = useState({
     instagram: 1,
-    tiktok: 2,
+    tiktok: 1,
     youtube: 1.5,
     other: 0.5
   });
@@ -24,18 +24,18 @@ const TimeDashboard = () => {
 
   const generateChart = (e) => {
     e.preventDefault();
-    
+
     const data = [
       timeData.instagram,
       timeData.tiktok,
       timeData.youtube,
       timeData.other
     ];
-    
+
     const totalHours = data.reduce((sum, time) => sum + time, 0);
     const totalYearHours = totalHours * 365;
     const totalYearDays = (totalYearHours / 24).toFixed(1);
-    
+
     setChartData({
       labels: ['Instagram', 'TikTok', 'YouTube', 'Outros'],
       datasets: [
@@ -56,13 +56,15 @@ const TimeDashboard = () => {
   };
 
   return (
-    <section id="time-dashboard" className="bg-white p-8 rounded-xl shadow-md mb-8 text-center">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Seu Tempo Digital (Simulação)</h2>
-      <p className="mb-6">Estime o tempo que você passa em cada app e veja o impacto real.</p>
-      
+    <section id="time-dashboard" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-14 md:mx-32 lg:mx-64">
+      <h2 className="text-xl md:text-3xl lg:text-5xl font-normal text-bege-900 mb-4 font-abril">Seu Tempo Digital (Simulação)</h2>
+      <p className="mb-6 ">Estime o tempo que você passa em cada app e veja o impacto real.</p>
+
       <form id="time-form" onSubmit={generateChart} className="max-w-md mx-auto text-left">
         <div className="form-group mb-4">
-          <label htmlFor="instagram-time" className="block mb-2">Instagram (horas/dia):</label>
+          <label htmlFor="instagram-time" className="block mb-2">
+            Instagram (horas/dia):
+          </label>
           <input
             type="number"
             id="instagram-time"
@@ -74,9 +76,11 @@ const TimeDashboard = () => {
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
         </div>
-        
+
         <div className="form-group mb-4">
-          <label htmlFor="tiktok-time" className="block mb-2">TikTok (horas/dia):</label>
+          <label htmlFor="tiktok-time" className="block mb-2">
+            TikTok (horas/dia):
+          </label>
           <input
             type="number"
             id="tiktok-time"
@@ -88,9 +92,11 @@ const TimeDashboard = () => {
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
         </div>
-        
+
         <div className="form-group mb-4">
-          <label htmlFor="youtube-time" className="block mb-2">YouTube (horas/dia):</label>
+          <label htmlFor="youtube-time" className="block mb-2">
+            YouTube (horas/dia):
+          </label>
           <input
             type="number"
             id="youtube-time"
@@ -102,9 +108,11 @@ const TimeDashboard = () => {
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
         </div>
-        
+
         <div className="form-group mb-6">
-          <label htmlFor="other-time" className="block mb-2">Outros (horas/dia):</label>
+          <label htmlFor="other-time" className="block mb-2">
+            Outros (horas/dia):
+          </label>
           <input
             type="number"
             id="other-time"
@@ -116,15 +124,18 @@ const TimeDashboard = () => {
             className="w-full p-2 border border-gray-300 rounded-lg"
           />
         </div>
-        
-        <button
-          type="submit"
-          className="bg-[#5A7E7B] text-white px-6 py-3 rounded-full font-bold transition-transform hover:translate-y-[-2px] active:translate-y-0"
-        >
-          Gerar Gráfico
-        </button>
+
+        <div className="flex justify-center">
+          <button
+            type="submit"
+            className="bg-verde text-black px-10 max-w-xs py-3 text-base rounded-full font-medium transition-transform hover:translate-y-[-2px] active:translate-y-0"
+          >
+            Gerar Gráfico
+          </button>
+        </div>
       </form>
-      
+
+
       {chartData && (
         <div className="chart-container mt-8 max-w-md mx-auto">
           <Doughnut
@@ -136,7 +147,7 @@ const TimeDashboard = () => {
                 },
                 tooltip: {
                   callbacks: {
-                    label: function(context) {
+                    label: function (context) {
                       const value = context.parsed;
                       const total = context.dataset.data.reduce((a, b) => a + b, 0);
                       const percentage = ((value / total) * 100).toFixed(1);

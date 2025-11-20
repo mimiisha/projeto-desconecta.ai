@@ -31,7 +31,7 @@ const Quiz = () => {
     })
 
     setProfilesScore(newScores)
-    
+
     if (currentQuestionIndex < quizQuestions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1)
     } else {
@@ -58,23 +58,23 @@ const Quiz = () => {
   }
 
   return (
-    <section id="quiz" className="bg-white p-8 rounded-xl shadow-md mb-8 text-center">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Qual é o seu tipo digital?</h2>
+    <section id="quiz" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-14 md:mx-32 lg:mx-64">
+      <h2 className="text-xl md:text-3xl lg:text-5xl font-normal text-bege-900 mb-4 font-abril">Qual é o seu tipo digital?</h2>
       <p className="mb-6">Descubra seu perfil com nosso quiz interativo!</p>
-      
+
       {!showResult ? (
         <>
-          <div className="text-sm text-gray-600 mb-4">
-            Pergunta {currentQuestionIndex + 1} de {quizQuestions.length}
-          </div>
-          <div className="text-lg font-medium mb-6">
+          <div className="font-medium mb-6 text-xl">
             {quizQuestions[currentQuestionIndex].question}
+          </div>
+          <div className="mb-4 text-sm flex justify-end">
+            Pergunta {currentQuestionIndex + 1} de {quizQuestions.length}
           </div>
           <div className="grid grid-cols-1 gap-4 mt-8">
             {quizQuestions[currentQuestionIndex].answers.map((answer, index) => (
               <button
                 key={index}
-                className="w-full p-4 rounded-lg bg-gray-100 text-gray-900 text-left transition-colors hover:bg-gray-200"
+                className="w-full p-4 rounded-lg bg-white text-gray-900 text-left transition-all duration-200 hover:bg-gray-100"
                 onClick={() => handleAnswerSelect(answer.profile)}
               >
                 {answer.text}
@@ -85,7 +85,7 @@ const Quiz = () => {
       ) : (
         <div>
           <h3 className="text-xl font-bold mb-4">Seu tipo digital é...</h3>
-          <h4 className="text-2xl font-bold text-[#5A7E7B] mb-4">
+          <h4 className="text-2xl text-verde mb-4 font-abril">
             {mainProfile === 'consciente' && "O Conectado Consciente"}
             {mainProfile === 'scrollador' && "O Explorador Digital (com tendência ao Scroll)"}
             {mainProfile === 'influencer' && "O Criador de Conteúdo (com potencial para equilíbrio)"}
@@ -96,7 +96,7 @@ const Quiz = () => {
             {mainProfile === 'influencer' && "Você gosta de se expressar e interagir online, o que é ótimo! Mas lembre-se da importância de se desconectar para recarregar as energias e viver o 'ao vivo'."}
           </p>
           <button
-            className="bg-[#5A7E7B] text-white px-6 py-3 rounded-full font-bold transition-transform hover:translate-y-[-2px] active:translate-y-0"
+            className="bg-verde text-black px-10 py-3 rounded-full font-medium transition-transform hover:translate-y-[-2px] active:translate-y-0 text-base"
             onClick={restartQuiz}
           >
             Refazer o Quiz

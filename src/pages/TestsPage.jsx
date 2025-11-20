@@ -4,8 +4,7 @@ import TimeDashboard from '../components/Tests/TimeDashboard'
 
 const TestsPage = () => {
     return (
-        <div>
-            <HeaderTestPage />
+        <div className='my-20'>
             <QuizTestPage />
             <TimeDashboard />
         </div>

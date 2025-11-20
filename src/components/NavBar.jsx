@@ -24,8 +24,8 @@ const NavBar = () => {
   ];
 
   return (
-    <header className="bg-transparent sticky top-0 z-50 transition-shadow duration-300 overflow-visible">
-      <nav className="flex justify-between items-center h-[80px] px-6 md:px-12">
+    <header className="backdrop-blur-sm sticky top-0 z-50 transition-shadow duration-300 overflow-visible">
+      <nav className="flex justify-between items-center h-[80px] px-12 md:px-16">
         <div className="hover:cursor-pointer" onClick={handleLogoClick}>
           <img src={logo} alt="Logo" className="w-auto h-10 object-contain" />
         </div>

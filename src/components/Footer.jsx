@@ -10,7 +10,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`${bgClass} w-full text-black pt-6 pb-10 mt-10 shadow-sm flex justify-center`}
+      className={`${bgClass} w-full text-black pt-10 pb-10 mt-10 shadow-sm flex justify-center`}
     >
       <div className="px-4">
         <p className="text-xs md:text-sm text-center">

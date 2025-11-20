@@ -12,10 +12,12 @@ const Layout = ({ children }) => {
     : "bg-bege";
 
   return (
-    <div className={bgClass}>
+    <div className={`${bgClass} min-h-screen flex flex-col`}>
       <NavBar />
       <ScrollToTop />
-      <main>{children}</main>
+      <main className="flex-1">
+        {children}
+      </main>
       <Footer />
     </div>
   );
