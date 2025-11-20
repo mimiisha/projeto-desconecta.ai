@@ -5,9 +5,9 @@ import { Developeres } from "../components/Developers.jsx";
 
 const About = () => {
     return (
-        <div className="w-full">
-            <div className="grid md:grid-cols-2 mt-10 md:-mt-30 px-12 md:px-16">
-                <div className="flex flex-col justify-center items-start gap-6 z-10">
+        <div className="w-auto">
+            <div className="grid md:grid-cols-2 mt-10 md:-mt-30 px-12 md:px-16 justify-center items-center">
+                <div className="flex flex-col  gap-6 z-10">
                     <h1 className="text-[80px] md:text-[120px] font-abril text-tittle">
                         Sobre
                     </h1>

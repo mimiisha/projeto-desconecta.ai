@@ -18,7 +18,7 @@ export default {
       },
       boxShadow: {
         "nav-scroll":
-          "0 6px 12px -2px rgba(251, 191, 36, 0.5), 0 4px 8px -2px rgba(251, 191, 36, 0.3)",
+          "0 6px 12px -2px rgba(0, 0, 0, 0.2), 0 4px 8px -2px rgba(0, 0, 0, 0.1)",
         "nav-scroll-lg":
           "0 12px 24px -4px rgba(251, 191, 36, 0.5), 0 8px 16px -4px rgba(251, 191, 36, 0.3)",
       },

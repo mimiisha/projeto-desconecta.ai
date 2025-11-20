@@ -57,15 +57,23 @@ const NavBar = () => {
 
   return (
     <header
-      className={`bg-backgound sticky top-0 z-50 transition-shadow duration-300 overflow-visible ${hasScrolled ? "shadow-nav-scroll" : ""
-        }`}
+      className={`
+    sticky top-0 z-50 transition-[background-color,box-shadow] duration-300 overflow-hidden
+    ${isMobileMenuOpen
+          ? "shadow-none"
+          : hasScrolled
+            ? "bg-black/10 shadow-nav-scroll backdrop-blur-sm"
+            : "bg-transparent"
+        }
+  `}
     >
+
       <nav className="flex justify-between items-center h-[80px] px-6 md:px-12">
         <div className="hover:cursor-pointer" onClick={handleLogoClick}>
           <img
             src={logoNavbar}
             alt="Logo do Desconecta.ai"
-            className="w-auto h-10 object-contain"
+            className="w-auto h-14 object-contain"
           />
         </div>
         <ul className="hidden md:flex gap-8 text-principalText">
@@ -92,7 +100,7 @@ const NavBar = () => {
 
       {/* Overlay de fundo */}
       <div
-        className={`md:hidden fixed inset-0 bg-black z-40 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
+        className={`md:hidden fixed inset-0 bg-black z-80 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
           }`}
         onClick={() => setIsMobileMenuOpen(false)}
       />

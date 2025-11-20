@@ -58,7 +58,7 @@ const Quiz = () => {
   }
 
   return (
-    <section id="quiz" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-14 md:mx-32 lg:mx-64">
+    <section id="quiz" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-8 md:mx-32 lg:mx-64">
       <h2 className="text-xl md:text-3xl lg:text-5xl font-normal text-bege-900 mb-4 font-abril">Qual é o seu tipo digital?</h2>
       <p className="mb-6">Descubra seu perfil com nosso quiz interativo!</p>
 

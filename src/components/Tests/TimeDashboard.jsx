@@ -56,7 +56,7 @@ const TimeDashboard = () => {
   };
 
   return (
-    <section id="time-dashboard" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-14 md:mx-32 lg:mx-64">
+    <section id="time-dashboard" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-8 md:mx-32 lg:mx-64">
       <h2 className="text-xl md:text-3xl lg:text-5xl font-normal text-bege-900 mb-4 font-abril">Seu Tempo Digital (Simulação)</h2>
       <p className="mb-6 ">Estime o tempo que você passa em cada app e veja o impacto real.</p>
 
