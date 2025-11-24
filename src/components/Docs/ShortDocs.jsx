@@ -11,7 +11,7 @@ const ShortDocs = () => {
   ];
 
   return (
-    <section id="short-docs" className="text-black p-8 rounded-xl mb-8 text-center text-lg mx-8 md:mx-32 lg:mx-64">
+    <section id="short-docs" className="text-black rounded-xl mb-8 text-center text-lg mx-8 md:mx-32 lg:mx-64">
       <h2 className="text-2xl font-bold text-gray-900 mb-4">Biblioteca de <span className="font-abril">"Short Docs"</span></h2>
       <p className="mb-6">Vídeos curtos para entender a ciência por trás do mundo digital.</p>
 
