@@ -3,7 +3,7 @@ import BlackScreenChallenge from '../components/Challenges/BlackScreenChallenge'
 
 const Challenges = () => {
     return (
-        <div>
+        <div className='my-20'>
             <AnalogMap />
             <BlackScreenChallenge />
         </div>

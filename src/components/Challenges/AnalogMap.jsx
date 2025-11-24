@@ -3,6 +3,8 @@ import { useState } from 'react';
 const AnalogMap = () => {
   const [selectedActivity, setSelectedActivity] = useState('');
   const [hoveredIsland, setHoveredIsland] = useState(null);
+  const [selectedIsland, setSelectedIsland] = useState(null);
+
 
   const islands = [
     {
@@ -51,18 +53,23 @@ const AnalogMap = () => {
         {islands.map(island => (
           <div
             key={island.id}
-            onClick={() => setSelectedActivity(island.activity)}
+            onClick={() => {
+              setSelectedIsland(island.id);
+              setSelectedActivity(island.activity);
+            }}
             onMouseEnter={() => setHoveredIsland(island.id)}
             onMouseLeave={() => setHoveredIsland(null)}
             className={`
-              island w-20 h-20 rounded-full border-4 border-[#F4C49A] cursor-pointer 
-              transition-all duration-300 ease-in-out transform
-              ${hoveredIsland === island.id ? "scale-110" : "scale-100"}
-              ${hoveredIsland === island.id ? "" : island.bgColor}
-            `}
+    island w-20 h-20 rounded-full border-4 border-[#F4C49A] cursor-pointer 
+    transition-all duration-300 ease-in-out transform
+    ${hoveredIsland === island.id || selectedIsland === island.id ? "scale-110" : "scale-100"}
+    ${!hoveredIsland && selectedIsland !== island.id ? island.bgColor : island.bgColor}
+  `}
             style={{
               backgroundImage:
-                hoveredIsland === island.id ? `url(${island.image})` : "none",
+                hoveredIsland === island.id || selectedIsland === island.id
+                  ? `url(${island.image})`
+                  : "none",
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}

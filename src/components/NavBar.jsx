@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ListIcon, XIcon } from "@phosphor-icons/react";
-import logoNavbar from "../imgs/desconecta-logo.png";
+import logoNavbar from "../assets/imgs/desconecta-logo.png";
 
 const NavBar = () => {
   const location = useLocation();
@@ -23,7 +23,6 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Impede o scroll do body quando o menu móvel está aberto
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
@@ -52,7 +51,7 @@ const NavBar = () => {
     { label: "Sobre", path: "/sobre" },
     { label: "Docs", path: "/documentos" },
     { label: "Testes", path: "/testes" },
-    { label: "Desafio", path: "/desafio" },
+    { label: "Desafio", path: "/desafios" },
   ];
 
   return (
@@ -98,14 +97,12 @@ const NavBar = () => {
         </button>
       </nav>
 
-      {/* Overlay de fundo */}
       <div
         className={`md:hidden fixed inset-0 bg-black z-80 transition-opacity duration-300 ${isMobileMenuOpen ? "opacity-50" : "opacity-0 pointer-events-none"
           }`}
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
-      {/* Menu lateral móvel */}
       <div
         className={`${bgClass} md:hidden flex flex-col gap-6 bg-backgound text-principalText text-lg fixed top-0 right-0 h-full w-64 z-50 p-6 transform transition-transform duration-300 ease-in-out ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}

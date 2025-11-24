@@ -7,6 +7,7 @@ import TestsPage from "./pages/TestsPage"
 import Challenges from "./pages/Challenges"
 import Home from "./pages/Home.jsx"
 import About from "./pages/About.jsx"
+import Docs from "./pages/Docs.jsx"
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -14,8 +15,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/sobre" element={<Layout><About /></Layout>} />
+        <Route path="/documentos" element={<Layout><Docs /></Layout>} />
         <Route path="/testes" element={<Layout><TestsPage /></Layout>} />
-        <Route path="/desafio" element={<Layout><Challenges /></Layout>} />
+        <Route path="/desafios" element={<Layout><Challenges /></Layout>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

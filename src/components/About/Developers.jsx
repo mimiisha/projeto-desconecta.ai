@@ -1,11 +1,11 @@
 import React from "react";
-import jay from "../imgs/jayfoto.jpeg";
-import mishafoto from "../imgs/mishafoto.jpeg";
+import jay from "../../assets/imgs/jayfoto.jpeg";
+import mishafoto from "../../assets/imgs/mishafoto.jpeg";
 
 export const Developeres = () => {
     return (
         <div>
-            <h1 className="text-[50px] md:text-[80px] font-abril text-tittle">
+            <h1 className="text-[36px] md:text-[80px] font-abril text-tittle">
                 Desenvolvedores do Projeto
             </h1>
             <p className="text-sm md:text-lg leading-relaxed text mb-5">
