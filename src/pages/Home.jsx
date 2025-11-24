@@ -2,9 +2,11 @@ import formas from "../assets/imgs/formas.png";
 
 const Home = () => {
   return (
-    <div className="w-full overflow-x-hidden">
+    <div className="w-full">
       <div className="grid grid-cols-1 md:grid-cols-2 mt-6 md:mt-10 px-4 md:px-16 justify-center items-center gap-6 md:gap-0">
-        <div className="flex flex-col gap-4 md:gap-6 z-10 order-2 md:order-1">
+        <div className="flex flex-col gap-4 md:gap-6 z-10 order-2 md:order-1"
+          data-aos="fade-up"
+          data-aos-delay="100" >
           <h1 className="text-[55px] md:text-[120px] font-abril text-tittle leading-tight md:leading-normal">
             desconecta.ai
           </h1>
@@ -16,7 +18,9 @@ const Home = () => {
             vida, leveza e significado para o seu dia a dia.
           </p>
         </div>
-        <div className="flex justify-center md:justify-end items-start md:pr-8 order-2">
+        <div className="flex justify-center md:justify-end items-start md:pr-8 order-2"
+          data-aos="fade-up"
+          data-aos-delay="250">
           <img
             src={formas}
             alt="Formas página principal"

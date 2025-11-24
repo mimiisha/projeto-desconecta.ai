@@ -13,6 +13,8 @@ export const CardsIdentidade = () => {
             {items.map((item, idx) => (
                 <div
                     key={idx}
+                    data-aos="fade-up"
+                    data-aos-delay={idx * 150} 
                     className="relative bg-white rounded-xl shadow-lg overflow-hidden pt-8 pb-6 px-6 w-full flex flex-col"
                 >
                     <div
@@ -22,7 +24,7 @@ export const CardsIdentidade = () => {
 
                     <div className="mt-2 text-center flex-1">
                         <h3 className="text-lg md:text-xl font-semibold text-tittle">{item.title}</h3>
-                        <p className="text-sm md:text-base text leading-relaxed">{item.text}</p>
+                        <p className="text-sm md:text-base leading-relaxed">{item.text}</p>
                     </div>
                 </div>
             ))}

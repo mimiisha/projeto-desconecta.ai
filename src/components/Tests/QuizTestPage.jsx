@@ -1,4 +1,3 @@
-// components/Quiz.jsx
 import React, { useState } from 'react'
 
 const Quiz = () => {
@@ -21,7 +20,42 @@ const Quiz = () => {
         { text: "Nem sei, já está na minha mão antes de eu levantar.", profile: { scrollador: 3, influencer: 2 } }
       ]
     },
-    // Adicione as outras perguntas aqui
+    {
+      question: "O que você sente se esquece o celular em casa?",
+      answers: [
+        { text: "Um pouco de alívio por não estar tão conectado.", profile: { consciente: 2 } },
+        { text: "Estranho, mas consigo aproveitar o dia.", profile: { consciente: 1, scrollador: 1 } },
+        { text: "Ansiedade e medo de perder algo importante.", profile: { scrollador: 2, influencer: 2 } },
+        { text: "Como se tivesse perdido uma parte de mim.", profile: { scrollador: 3, influencer: 3 } }
+      ]
+    },
+    {
+      question: "Você costuma verificar as notificações do celular durante conversas com amigos ou familiares?",
+      answers: [
+        { text: "Nunca, a atenção está nas pessoas presentes.", profile: { consciente: 3 } },
+        { text: "Raramente, apenas se estiver esperando algo urgente.", profile: { consciente: 1, scrollador: 1 } },
+        { text: "Às vezes dou uma olhada rápida.", profile: { scrollador: 2, influencer: 1 } },
+        { text: "Sim, é quase automático.", profile: { scrollador: 3, influencer: 2 } }
+      ]
+    },
+    {
+      question: "Como você se sente ao ver um post com muitos likes e comentários?",
+      answers: [
+        { text: "Fico feliz pela pessoa, mas não me afeta diretamente.", profile: { consciente: 2 } },
+        { text: "Às vezes me pergunto o que eu poderia postar para ter a mesma atenção.", profile: { scrollador: 1, influencer: 2 } },
+        { text: "Sinto vontade de interagir e participar da conversa.", profile: { scrollador: 2, influencer: 3 } },
+        { text: "Não ligo muito para isso.", profile: { consciente: 3 } }
+      ]
+    },
+    {
+      question: "Antes de dormir, qual é a última coisa que você geralmente faz?",
+      answers: [
+        { text: "Leio um livro físico ou converso com alguém.", profile: { consciente: 3 } },
+        { text: "Organizo minhas coisas para o dia seguinte.", profile: { consciente: 2 } },
+        { text: "Dou uma última olhada nas redes sociais.", profile: { scrollador: 2, influencer: 1 } },
+        { text: "Fico rolando o feed até o sono chegar.", profile: { scrollador: 3, influencer: 2 } }
+      ]
+    }
   ]
 
   const handleAnswerSelect = (profilePoints) => {

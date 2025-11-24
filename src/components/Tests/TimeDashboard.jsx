@@ -1,4 +1,3 @@
-// components/TimeDashboard.jsx
 import React, { useState } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
@@ -7,11 +6,12 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 const TimeDashboard = () => {
   const [timeData, setTimeData] = useState({
-    instagram: 1,
-    tiktok: 1,
-    youtube: 1.5,
-    other: 0.5
+    instagram: "",
+    tiktok: "",
+    youtube: "",
+    other: ""
   });
+
   const [chartData, setChartData] = useState(null);
 
   const handleInputChange = (e) => {
@@ -33,7 +33,14 @@ const TimeDashboard = () => {
     ];
 
     const totalHours = data.reduce((sum, time) => sum + time, 0);
-    const totalYearHours = totalHours * 365;
+
+    const now = new Date();
+    const startOfYear = new Date(now.getFullYear(), 0, 1);
+    const diff = now - startOfYear;
+
+    const daysPassed = Math.floor(diff / (1000 * 60 * 60 * 24)) + 1;
+
+    const totalYearHours = totalHours * daysPassed;
     const totalYearDays = (totalYearHours / 24).toFixed(1);
 
     setChartData({
@@ -51,9 +58,11 @@ const TimeDashboard = () => {
         }
       ],
       totalYearHours,
-      totalYearDays
+      totalYearDays,
+      daysPassed
     });
   };
+
 
   return (
     <section id="time-dashboard" className="bg-marrom text-bege p-8 rounded-xl shadow-md mb-8 text-center text-lg mx-8 md:mx-32 lg:mx-64">
@@ -71,9 +80,10 @@ const TimeDashboard = () => {
             name="instagram"
             min="0"
             step="0.5"
+            placeholder="ex: 1"
             value={timeData.instagram}
             onChange={handleInputChange}
-            className="w-full p-2 border border-gray-300 rounded-lg"
+            className="w-full p-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
           />
         </div>
 
@@ -87,9 +97,10 @@ const TimeDashboard = () => {
             name="tiktok"
             min="0"
             step="0.5"
+            placeholder="ex: 1"
             value={timeData.tiktok}
             onChange={handleInputChange}
-            className="w-full p-2 border border-gray-300 rounded-lg"
+            className="w-full p-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
           />
         </div>
 
@@ -103,9 +114,10 @@ const TimeDashboard = () => {
             name="youtube"
             min="0"
             step="0.5"
+            placeholder="ex: 1.5"
             value={timeData.youtube}
             onChange={handleInputChange}
-            className="w-full p-2 border border-gray-300 rounded-lg"
+            className="w-full p-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
           />
         </div>
 
@@ -119,9 +131,10 @@ const TimeDashboard = () => {
             name="other"
             min="0"
             step="0.5"
+            placeholder="ex: 0.5"
             value={timeData.other}
             onChange={handleInputChange}
-            className="w-full p-2 border border-gray-300 rounded-lg"
+            className="w-full p-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
           />
         </div>
 
@@ -158,7 +171,7 @@ const TimeDashboard = () => {
               }
             }}
           />
-          <div className="mt-4 p-4 bg-gray-100 rounded-lg">
+          <div className="mt-4 p-4 bg-gray-100 text-black rounded-lg">
             <p className="font-medium">
               Você gastou {chartData.totalYearHours.toLocaleString()} horas nestes apps este ano.
               Isso equivale a {chartData.totalYearDays} dias inteiros!

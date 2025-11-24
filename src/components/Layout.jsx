@@ -2,8 +2,15 @@ import { useLocation } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Layout = ({ children }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   const location = useLocation()
   const greenPages = ["/", "/sobre", "/desafio"]
 

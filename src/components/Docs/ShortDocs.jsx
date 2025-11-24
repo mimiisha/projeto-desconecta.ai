@@ -17,7 +17,9 @@ const ShortDocs = () => {
 
       <div className="video-grid grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
         {videos.map(video => (
-          <div key={video.id} className="video-container bg-gray-100 p-4 rounded-lg shadow-md">
+          <div key={video.id} className="video-container bg-gray-100 p-4 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay={video.id * 150} >
             <h4 className="text-lg font-medium mb-2">{video.title}</h4>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
