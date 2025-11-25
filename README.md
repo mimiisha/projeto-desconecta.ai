@@ -39,6 +39,8 @@ Projeto para ajudar as pessoas a reduzir distrações digitais, retomar o foco e
   </a>
 </p>
 
+---
+
 ## 🛠 Tecnologias Utilizadas
 
 - [Vite](https://vitejs.dev/)
