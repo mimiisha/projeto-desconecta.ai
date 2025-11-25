@@ -1,4 +1,5 @@
 import React from "react";
+import { InstagramLogoIcon } from "@phosphor-icons/react";
 import jay from "../../assets/imgs/jayfoto.jpeg";
 import mishafoto from "../../assets/imgs/mishafoto.jpeg";
 
@@ -17,12 +18,28 @@ export const Developeres = () => {
                     data-aos-delay="100">
                     <img src={jay} alt="Jayne" className="mt-10 md:mt-0 w-auto max-w-[320px] md:max-w-[500px] h-auto object-contain rounded-full" />
                     <p className="mt-6 text-center text-lg font-semibold">Jayne Matias</p>
+                    <a
+                        href="https://instagram.com/jayne_matias"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2"
+                    >
+                        <InstagramLogoIcon size={32} weight="fill" className="text-marrom" />
+                    </a>
                 </div>
                 <div className="flex flex-col items-center"
                     data-aos="fade-up"
                     data-aos-delay="250">
                     <img src={mishafoto} alt="Outra desenvolvedora" className="mt-10 md:mt-0 w-auto max-w-[320px] md:max-w-[500px] h-auto object-contain rounded-full" />
                     <p className="mt-6 text-center text-lg font-semibold">Misha</p>
+                    <a
+                        href="https://instagram.com/imnotmiisha"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2"
+                    >
+                        <InstagramLogoIcon size={32} weight="fill" className="text-marrom" />
+                    </a>
                 </div>
             </div>
         </div>
