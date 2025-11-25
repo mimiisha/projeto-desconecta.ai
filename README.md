@@ -1,12 +1,63 @@
-# React + Vite
+# 🌟 Desconecta.ai
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto para ajudar as pessoas a reduzir distrações digitais, retomar o foco e viver com mais intenção.
+É uma aplicação construída com **Vite**, **React (JSX)** e **Tailwind CSS**, ideal para quem precisa de uma ferramenta simples para criar hábitos mais saudáveis de uso do celular.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🖥️ Funcionalidades
 
-## Expanding the ESLint configuration
+- **🏠 Home**  
+  Apresentação do conteúdo do Desconecta.ai.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **📄 Sobre**  
+  - Breve texto sobre o projeto.  
+  - Botão para acesso a página de desafios.  
+  - Foto dos desenvolvedores do projeto.  
+  - Explicação das cores escolhidas.
+  - Explicação do porquê da escolha das cores.
+
+- **📂 Docs**  
+  - Cards com nome e link direto para documentários do YouTube.  
+
+- **📬 Testes**  
+  - Teste via valores para três tipos usuário.  
+  - Teste de simulação do tempo que passamos nas redes.
+ 
+- **👾 Desafios**  
+  - Mapa de ideias Analógicas, com ideias criativas fora do celular. 
+  - Desafio do modo tela preta.
+---
+
+## 🛠 Desenvolvedores
+<p align="left">
+  <a href="https://www.linkedin.com/in/imnotmiisha" target="_blank"> Misha
+    <img src="https://s.magecdn.com/social/tc-instagram.svg" alt="Instagram" width="60px"/>
+  </a>
+    <a href="https://www.linkedin.com/in/jayne_matias" target="_blank"> Jayne Matias
+    <img src="https://s.magecdn.com/social/tc-instagram.svg" alt="Instagram" width="60px"/>
+  </a>
+</p>
+
+## 🛠 Tecnologias Utilizadas
+
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+---
+
+## 📂 Estrutura do Código
+```plaintext
+📁 projeto-desconecta-ai
+ ├── 📁 public         # Arquivos públicos
+ ├── 📁 src
+ │    ├── 📁 assets      # Imagens utilizadas no projeto
+ │    ├── 📁 components  # Componentes reutilizáveis
+ │    ├── 📁 pages       # Páginas principais 
+ │    ├── main.jsx       # Entrada do React
+ │    └── index.css      # Estilo global com Tailwind
+ ├── index.html
+ ├── package.json
+ ├── tailwind.config.js
+ └── vite.config.js
