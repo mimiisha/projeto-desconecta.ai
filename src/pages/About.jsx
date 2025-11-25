@@ -19,7 +19,7 @@ const About = () => {
                         Sobre
                     </h1>
                     <p className="text-base md:text-2xl leading-relaxed text">
-                        O desconecta.ai nasceu para te empoderar...
+                        O desconecta.ai nasceu para te empoderar. Acreditamos que é possível usar a tecnologia a nosso favor, sem que ela domine nossas vidas. Explore nossas dicas, documentos e recursos para construir hábitos digitais equilibrados e redescobrir a beleza do mundo real. Sua jornada para uma vida mais presente começa aqui.
                     </p>
                     <a
                         href="/desafios"
@@ -60,7 +60,7 @@ const About = () => {
                         Identidade visual
                     </h1>
                     <p className="text-sm md:text-lg leading-relaxed text mb-4 md:mb-5">
-                        A paleta de cores do Desconecta.ai foi cuidadosamente escolhida...
+                        A paleta de cores do Desconecta.ai foi cuidadosamente escolhida para transmitir a mensagem de equilíbrio digital, combinando tons que representam tranquilidade, clareza, simplicidade e segurança. Cada cor tem um propósito específico na comunicação visual do projeto.
                     </p>
                     <CardsIdentidade />
                 </div>

@@ -55,7 +55,9 @@ const BlackScreenChallenge = () => {
 
   const givePoints = React.useCallback(() => {
     let points = 0;
-    if (initialDuration === 15) points = 50;
+
+    if (initialDuration === 5) points = 20;
+    else if (initialDuration === 15) points = 50;
     else if (initialDuration === 30) points = 100;
     else if (initialDuration === 60) points = 200;
 
@@ -144,6 +146,12 @@ const BlackScreenChallenge = () => {
       {!challengeActive ? (
         <>
           <div className="challenge-options mb-6 gap-4 flex flex-col lg:flex-row justify-center">
+            <button
+              className="bg-marrom text-white px-6 py-3 rounded-full font-bold mx-1 transition-transform hover:translate-y-[-2px] active:translate-y-0"
+              onClick={() => startChallenge(5)}
+            >
+              5 Minutos (+20 pontos)
+            </button>
             <button
               className="bg-marrom text-white px-6 py-3 rounded-full font-bold mx-1 transition-transform hover:translate-y-[-2px] active:translate-y-0"
               onClick={() => startChallenge(15)}
